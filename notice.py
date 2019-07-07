@@ -25,7 +25,6 @@ if(path.exists(".notifications.txt")):
     for i in range(0,10):
         if(x == name[i]):
             break
-    print(i)
 st = ""
 my_path = '/home/piyush/Downloads/NITJSR_NOTIFICATIONS'
 try:
@@ -34,7 +33,6 @@ except FileExistsError:
     pass
 
 for z in range(0,i):
-    print('http://www.nitjsr.ac.in/'+link[z].strip())
     urllib.request.urlretrieve('http://www.nitjsr.ac.in/'+link[z],path.join(my_path,name[z].strip()))
     st = st + name[z]
 
